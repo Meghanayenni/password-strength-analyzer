@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="background-shapes">
+    <span class="shape shape1"></span>
+    <span class="shape shape2"></span>
+    <span class="shape shape3"></span>
+  </div>
+
+  <div class="app">
+    <div class="top-bar">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h1>Password analyzer</h1>
+          <p>Real-time cryptographic evaluation</p>
+        </div>
+      </div>
+
+      <button class="menu-btn">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+    </div>
+
+    <div class="input-section">
+      <div class="password-box">
+        <i class="fa-solid fa-lock input-icon"></i>
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Enter your password"
+        />
+        <button id="toggleBtn" class="toggle-btn">
+          <i class="fa-solid fa-eye"></i>
+         <span>Show</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="score-row">
+      <div class="score-circle" id="scoreCircle">
+        <div class="score-inner">
+          <h2 id="scoreValue">0%</h2>
+          <span>SCORE</span>
+        </div>
+      </div>
+
+      <div class="score-text">
+        <h2 id="strengthLabel">Start typing</h2>
+        <p id="strengthMessage">Enter a password to analyze its security</p>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-title">LENGTH</span>
+        <h3 id="lengthValue">0</h3>
+        <p>chars</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-title">ENTROPY</span>
+        <h3 id="entropyValue">0</h3>
+        <p id="entropyPool">0-char pool</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-title">CRACK TIME</span>
+        <h3 id="crackValue">Instant</h3>
+        <p>10B/sec</p>
+      </div>
+    </div>
+
+    <div class="checks-section">
+      <h3>SECURITY CHECKS</h3>
+
+      <div class="checks-grid">
+        <div class="check-item" id="check8">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>8+ characters</span>
+        </div>
+
+        <div class="check-item" id="checkUpper">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>Uppercase A-Z</span>
+        </div>
+
+        <div class="check-item" id="checkLower">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>Lowercase a-z</span>
+        </div>
+
+        <div class="check-item" id="checkNumber">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>Numbers 0-9</span>
+        </div>
+
+        <div class="check-item" id="checkSpecial">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>Special chars</span>
+        </div>
+
+        <div class="check-item" id="check16">
+          <i class="fa-regular fa-circle-check"></i>
+          <span>16+ characters</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="suggestion-section">
+      <h3>SUGGESTIONS</h3>
+      <div class="suggestion-box" id="suggestionBox">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Type a password to see suggestions</span>
+      </div>
+    </div>
+
+    <div class="bottom-icon">
+      <i class="fa-solid fa-arrow-down"></i>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
