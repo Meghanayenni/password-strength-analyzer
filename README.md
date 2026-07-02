@@ -1,5 +1,5 @@
 # Password Strength Analyzer
-
+Intern ID: CITS5240
 This is a cybersecurity mini-project that analyzes the strength of user-entered passwords in real time.
 
 ## Features
